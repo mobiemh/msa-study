@@ -1,0 +1,4 @@
+rootProject.name = 'msa-study'
+include ':api'
+include ':util'
+include ':microservices:user-service'
