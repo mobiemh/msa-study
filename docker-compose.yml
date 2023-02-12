@@ -9,3 +9,8 @@ services:
   content-service:
     build: microservices/content-service
 
+  order-composite-service:
+    build: microservices/order-composite-service
+
+  order-service:
+    build: microservices/order-service

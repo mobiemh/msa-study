@@ -1,0 +1,21 @@
+
+server:
+  port: 8081
+spring:
+  cloud:
+    function:
+      definition: createOrder;test;
+    stream:
+      bindings:
+        test-in-0:
+          destination: test
+        createOrder-in-0:
+          destination: orders
+          binder: rabbit
+          group: ordersGroup
+          durableSubscription: true
+      rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        username: guest
+        password: guest

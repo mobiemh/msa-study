@@ -1,0 +1,15 @@
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        test-out-0:
+          destination: test
+        createOrder-out-0:
+          destination: orders
+          binder: rabbit
+      rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        username: guest
+        password: guest

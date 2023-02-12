@@ -2,3 +2,6 @@ include ':api'
 include ':util'
 include ':microservices:user-service'
 include ':microservices:content-service'
+include ':microservices:order-service'
+include ':microservices:order-composite-service'
+
