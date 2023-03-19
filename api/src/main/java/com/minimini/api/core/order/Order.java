@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 @Data
 public class Order implements Serializable {
+    private int orderId;
     private String title;
     private String body;
 
@@ -22,6 +23,10 @@ public class Order implements Serializable {
 
     public String getBody() {
         return this.body;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
     @Override

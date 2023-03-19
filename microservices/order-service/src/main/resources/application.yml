@@ -19,3 +19,15 @@ spring:
         port: 5672
         username: guest
         password: guest
+resilience4j:
+  circuitbreaker:
+    backends:
+      order:
+        ringBufferSizeInClosedState: 5
+        failureRateThreshold: 50
+        waitInterval: 10000
+        automaticTrasitionFromOpenToHalfOpenEnabled: true
+        ringBufferSizeInHalfOpenState: 3
+        ignoreExceptions:
+          - com.minimini.util.exceptions.InvalidInputException
+          - com.minimini.util.exceptions.NotFoundException
